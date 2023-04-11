@@ -8,7 +8,6 @@ if (process.env.NODE_ENV === 'production') {
   PORT = process.env.PORT;
   DB_ADDRESS = process.env.DB_ADDRESS;
   JWT_SECRET = process.env.JWT_SECRET;
-
 } else {
   PORT = 3000;
   DB_ADDRESS = 'mongodb://127.0.0.1:27017/mestodb';
