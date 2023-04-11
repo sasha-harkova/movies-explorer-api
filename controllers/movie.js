@@ -23,6 +23,7 @@ function createMovie(req, res, next) {
     image,
     trailerLink,
     thumbnail,
+    movieId,
     nameRU,
     nameEN,
   } = req.body;
@@ -35,6 +36,7 @@ function createMovie(req, res, next) {
     image,
     trailerLink,
     thumbnail,
+    movieId,
     nameRU,
     nameEN,
     owner: req.user._id,

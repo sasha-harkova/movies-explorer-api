@@ -3,8 +3,8 @@ const allowedCors = [
   'https://localhost:3000',
   'http://127.0.0.1:3000',
   'https://127.0.0.1:3000',
-  // 'http://mesto.harkova.nomoredomains.work',
-  // 'https://mesto.harkova.nomoredomains.work',
+  'http://movies.search.harkova.nomoredomains.monster',
+  'https://movies.search.harkova.nomoredomains.monster',
 ];
 
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
