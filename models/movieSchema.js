@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
 
-const userSchema = new mongoose.Schema({
+const movieSchema = new mongoose.Schema({
   country: {
     type: String,
     required: true,
@@ -61,9 +61,8 @@ const userSchema = new mongoose.Schema({
   },
 
   movieId: {
-    type: String,
+    type: Number,
     required: true,
-    unique: true,
   },
 
   nameRU: {
@@ -77,4 +76,4 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('movie', userSchema);
+module.exports = mongoose.model('movie', movieSchema);

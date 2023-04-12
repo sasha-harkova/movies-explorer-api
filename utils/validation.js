@@ -4,7 +4,7 @@ const urlPattern = /https?:\/\/(www\.)?[a-zA-Z\d-]+\.[\w\d\-.~:/?#[\]@!$&'()*+,;
 
 const userValidation = celebrate({
   body: Joi.object().keys({
-    name: Joi.string().min(2).max(30),
+    name: Joi.string().min(2).max(30).required(),
     email: Joi.string().email().required(),
   }),
 });
@@ -12,22 +12,22 @@ const userValidation = celebrate({
 const loginValidation = celebrate({
   body: Joi.object().keys({
     email: Joi.string().email().required(),
-    password: Joi.string().required().min(8),
+    password: Joi.string().required(),
   }),
 });
 
 const registrationValidation = celebrate({
   body: Joi.object().keys({
-    name: Joi.string().min(2).max(30),
+    name: Joi.string().min(2).max(30).required(),
     email: Joi.string().email().required(),
-    password: Joi.string().required().min(8),
+    password: Joi.string().required(),
   }),
 });
 
 const movieValidationId = celebrate({
   params: Joi.object().keys({
-    movieId: Joi.string().required(),
-  }).unknown(true),
+    itemId: Joi.string().required(),
+  }),
 });
 
 const movieValidation = celebrate({
@@ -40,7 +40,7 @@ const movieValidation = celebrate({
     image: Joi.string().required().pattern(urlPattern),
     trailerLink: Joi.string().required().pattern(urlPattern),
     thumbnail: Joi.string().required().pattern(urlPattern),
-    movieId: Joi.string().required(),
+    movieId: Joi.number().required(),
     nameRU: Joi.string().required(),
     nameEN: Joi.string().required(),
   }),

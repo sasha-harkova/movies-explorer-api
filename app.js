@@ -20,8 +20,8 @@ mongoose.connect(DB_ADDRESS, {
 app.use(helmet());
 app.use(bodyParser.json());
 app.use(cors);
-app.use(limiter);
 app.use(requestLogger);
+app.use(limiter);
 app.use(router);
 app.use(errorLogger);
 app.use(errors());

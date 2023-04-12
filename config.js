@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === 'production') {
   JWT_SECRET = process.env.JWT_SECRET;
 } else {
   PORT = 3000;
-  DB_ADDRESS = 'mongodb://127.0.0.1:27017/mestodb';
+  DB_ADDRESS = 'mongodb://127.0.0.1:27017/bitfilmsdb';
   JWT_SECRET = 'secret-key';
 }
 

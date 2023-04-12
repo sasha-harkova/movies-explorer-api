@@ -47,7 +47,7 @@ function createMovie(req, res, next) {
 
 // DELETE /movies/_id
 function deleteMovie(req, res, next) {
-  Movie.findById(req.params.movieId)
+  Movie.findById(req.params.itemId)
     .orFail(new NotFoundError(error404Message))
     .then((movie) => {
       if (movie.owner.toString() === req.user._id) {
