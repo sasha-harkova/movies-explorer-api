@@ -41,7 +41,7 @@ userSchema.statics.findUserByCredentials = function (email, password) {
           return user;
         });
     })
-    .catch((err) => (`Ошибка аутентификации: ${err}`))
+    .catch(new AuthError(error401MessageForLogin));
 };
 
 module.exports = mongoose.model('user', userSchema);
